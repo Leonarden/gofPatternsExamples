@@ -6,10 +6,11 @@ public class Concurrent implements Runnable{
 
 	public void run() {
 		try {
-		for(int i=0;i<1000;i++) {
-			Thread.sleep(300);
+		for(int i=0;i<100;i++) {
+			Thread.sleep(200);
 			singleton = CSingleton.getInstance();
-			Thread.sleep(100);
+			Thread.sleep(50);
+			System.out.println("From thread:" + this.toString() + "singleton:" + singleton.toString());
 			System.out.println("Work: " +singleton.doWork());
 			
 		}
