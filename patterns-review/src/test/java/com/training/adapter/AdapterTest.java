@@ -43,7 +43,7 @@ public class AdapterTest
     	
     	adapter.buy();
     	
-    	adapter.shell();
+    	adapter.sell();
     	
     	System.out.println("Adapting american facilities");
     	
@@ -51,7 +51,7 @@ public class AdapterTest
     	
     	adapter.buy();
     	
-    	adapter.shell();
+    	adapter.sell();
     	
     	
     		
