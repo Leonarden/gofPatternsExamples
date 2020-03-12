@@ -8,7 +8,7 @@ public abstract class NationalFacility {
 		this.currency = currency;
 	}
 
-	public abstract void shellWithCurrency();
+	public abstract void sellWithCurrency();
 	
 	public abstract void buyWithCurrency();
 }

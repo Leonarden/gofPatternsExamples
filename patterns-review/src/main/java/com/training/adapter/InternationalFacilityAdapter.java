@@ -9,9 +9,9 @@ public class InternationalFacilityAdapter implements InternationalFacility {
 	}
 	
 	
-	public void shell() {
+	public void sell() {
 	
-		facility.shellWithCurrency();
+		facility.sellWithCurrency();
 
 	}
 

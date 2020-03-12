@@ -9,7 +9,7 @@ public class USFacility extends NationalFacility {
 	}
 
 	@Override
-	public void shellWithCurrency() {
+	public void sellWithCurrency() {
 		// TODO Auto-generated method stub
 
 		System.out.println(" We are selling our goods in  " + currency);
