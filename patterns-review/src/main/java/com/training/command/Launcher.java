@@ -6,6 +6,7 @@ public class Launcher {
 	 * @param args
 	 */
 	public static void main(String[]args) {
+		
 		CarRaceControl carRaceControl = new CarRaceControl(2);
 		
 		long start = System.currentTimeMillis();
