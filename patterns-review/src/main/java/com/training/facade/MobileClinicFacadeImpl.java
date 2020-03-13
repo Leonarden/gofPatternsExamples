@@ -1,25 +1,25 @@
 package com.training.facade;
 
-public class DiscoFacadeImpl implements DiscoFacade {
+public class MobileClinicFacadeImpl implements MobileClinicFacade {
 
-	private DiscoBuilding building;
-	private Bar bar;
-	private MusicSystem musicSystem;
+	private PortableClinicBuildingImpl building;
+	private ClinicPersonnel personnel;
+	private ClinicalHardware clinicalHardware;
 	private boolean closed = true;
 	private int hours = 0;
 	
-	public DiscoFacadeImpl(int hours,DiscoBuilding building, MusicSystem ms, Bar b) {
+	public MobileClinicFacadeImpl(int hours,PortableClinicBuildingImpl building, ClinicalHardware ch, ClinicPersonnel p) {
 		this.hours = hours;
 		this.building = building;
-		this.bar = b;
-		this.musicSystem = ms;
+		this.personnel = p;
+		this.clinicalHardware = ch;
 	}
 	
 	public boolean prepare() {
 		boolean s = false;
 		try {
-		building.setBar(this.bar);
-		building.setMusicSystem(this.musicSystem);
+		building.setPersonnel(this.personnel);
+		building.setClinicalHardware(this.clinicalHardware);
 		building.setHours(this.hours);
 		building.cleanBuilding();
 		s = true;
@@ -35,7 +35,7 @@ public class DiscoFacadeImpl implements DiscoFacade {
 			
 			building.open();
 			this.closed = false;
-			System.out.println("Disco is open");
+			System.out.println("Mobile clinic open!");
 			stat = true;
 		}catch(Exception ex) {
 			ex.printStackTrace();
@@ -44,7 +44,7 @@ public class DiscoFacadeImpl implements DiscoFacade {
 		return stat;
 	}
 
-	public boolean runDisco() {
+	public boolean work() {
 	  boolean s = false;
 	  try {
 		  if(!this.closed) {

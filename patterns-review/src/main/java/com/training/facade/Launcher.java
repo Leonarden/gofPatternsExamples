@@ -7,26 +7,26 @@ public class Launcher {
  */
 	public static void main(String[] args) {
 	
-		Bar bar = new Bar();
+		ClinicPersonnel personnel = new ClinicPersonnel();
 
-		MusicSystem musicSystem = new MusicSystem();
+		ClinicalHardware clinicalHardware = new ClinicalHardware();
 		
-		DiscoBuilding building = new DiscoBuilding();
+		PortableClinicBuildingImpl building = new PortableClinicBuildingImpl();
 		
-		DiscoFacade disco = new DiscoFacadeImpl(8,building, musicSystem,bar);
+		MobileClinicFacade mobileClinic = new MobileClinicFacadeImpl(8,building, clinicalHardware,personnel);
 		
 		try {
-			if(!disco.prepare())
-				throw new Exception("Can't prepare Disco");
+			if(!mobileClinic.prepare())
+				throw new Exception("Can't prepare Mobile Clinic");
 			Thread.sleep(100);
 			
-			disco.open();
+			mobileClinic.open();
 			
-			if(!disco.runDisco())
-				throw new Exception("A problem occurred starting the show");
+			if(!mobileClinic.work())
+				throw new Exception("A problem occurred starting work");
 			Thread.sleep(300);		
 			
-			disco.close();
+			mobileClinic.close();
 			
 		}catch(Exception ex) 
 			{ex.printStackTrace();
