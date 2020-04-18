@@ -2,15 +2,17 @@ package com.training.adapter;
 
 public class USFacility extends NationalFacility {
 
+	//Concrete implementation of adaptee class
+	
 	public USFacility(String currency) {
 		super(currency);
 		
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Override
 	public void sellWithCurrency() {
-		// TODO Auto-generated method stub
+	
 
 		System.out.println(" We are selling our goods in  " + currency);
 	}

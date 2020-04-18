@@ -2,6 +2,7 @@ package com.training.adapter;
 
 public class EUFacility extends NationalFacility {
 
+	//Concrete implementation of adaptee class
 	public EUFacility(String currency) {
 		super(currency);
 		
